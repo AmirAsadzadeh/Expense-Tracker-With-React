@@ -1,3 +1,4 @@
+import { Children } from "react";
 import "./App.css";
 import Expenses from "./components/Expenses";
 

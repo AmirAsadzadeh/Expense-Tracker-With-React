@@ -1,7 +1,9 @@
+import { Children } from "react";
 import "./Card.css";
 
-function Card() {
-  return <div className="card"></div>;
+function Card(props) {
+  console.log(props)
+  return <div className={`card  ${props.classes}`}>{props.children}</div>;
 }
 
 export default Card;
