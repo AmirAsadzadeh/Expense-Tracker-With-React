@@ -27,7 +27,7 @@ function Expenses() {
   ];
 
   return (
-    <Card classes={"expenses"}>
+    <Card className="expenses">
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
