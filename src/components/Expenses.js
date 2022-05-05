@@ -1,4 +1,5 @@
 import "./Expenses.css";
+import React from "react";
 import ExpenseItem from "./ExpenseItem";
 import Card from "./Card";
 

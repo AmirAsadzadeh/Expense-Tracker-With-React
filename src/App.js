@@ -1,5 +1,5 @@
-import { Children } from "react";
 import "./App.css";
+import React from "react";
 import Expenses from "./components/Expenses";
 
 function App() {
