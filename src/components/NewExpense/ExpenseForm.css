@@ -1,0 +1,49 @@
+.new-expense__controls {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.new-expense__control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-expense__control input {
+  all: unset;
+  background-color: white;
+  box-sizing: border-box;
+  width: 80%;
+  height: 2.5rem;
+  position: relative;
+  right: 0;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.new-expense__control input:focus   {
+  border: 1px solid purple;
+  /* border: none; */
+  outline: none;
+}
+
+.new-expense__actions {
+  position: relative;
+}
+
+.new-expense__actions button {
+  all: unset;
+  background-color: blueviolet;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem black;
+  position: absolute;
+  right: 0;
+}
+
+.new-expense__actions button:active {
+  box-shadow: inset 0 0 0.5rem black;
+}
