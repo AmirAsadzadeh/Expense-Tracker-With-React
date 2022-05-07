@@ -3,31 +3,38 @@ import React, { useState } from "react";
 
 function ExpenseForm() {
   const today = new Date().toISOString().split("T")[0];
-  // const [enteredTitle, setEnteredTitle] = useState("");
-  // const [enteredAmount, setEnteredAmount] = useState("");
-  // const [enteredDate, setEnteredDate] = useState("");
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredAmount, setEnteredAmount] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
 
-  const [userInputs, setUserInput] = useState({
-    enteredTitle: "",
-    enteredAmount: "",
-    enteredDate: "",
-  });
+  // use one state hook call insted of three calls
+  // const [userInputs, setUserInput] = useState({
+  //   enteredTitle: "",
+  //   enteredAmount: "",
+  //   enteredDate: "",
+  // });
 
   //   const formData = {};
 
   const titleChangeHandler = function (event) {
-    // setEnteredTitle(event.target.value);
-    setUserInput({ ...userInputs, enteredTitle: event.target.value });
+    setEnteredTitle(event.target.value);
+    console.log(enteredTitle);
+    // setUserInput({ ...userInputs, enteredTitle: event.target.value });
+    // setUserInput((prevState) => {
+    //   return { ...prevState, enteredTitle: event.target.value };
+    // });
   };
 
   const amountChangeHandler = function (event) {
-    // setEnteredAmount(event.target.value);
-    setUserInput({ ...userInputs, enteredAmount: event.target.value });
+    setEnteredAmount(event.target.value);
+    console.log(enteredAmount);
+    // setUserInput({ ...userInputs, enteredAmount: event.target.value });
   };
 
   const dateChangeHandler = function (event) {
-    // setEnteredDate(event.target.value);
-    setUserInput({ ...userInputs, enteredDate: event.target.value });
+    setEnteredDate(event.target.value);
+    console.log(enteredDate);
+    // setUserInput({ ...userInputs, enteredDate: event.target.value });
   };
 
   return (
