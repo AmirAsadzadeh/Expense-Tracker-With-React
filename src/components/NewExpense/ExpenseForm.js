@@ -18,7 +18,6 @@ function ExpenseForm() {
 
   const titleChangeHandler = function (event) {
     setEnteredTitle(event.target.value);
-    console.log(enteredTitle);
     // setUserInput({ ...userInputs, enteredTitle: event.target.value });
     // setUserInput((prevState) => {
     //   return { ...prevState, enteredTitle: event.target.value };
@@ -27,22 +26,39 @@ function ExpenseForm() {
 
   const amountChangeHandler = function (event) {
     setEnteredAmount(event.target.value);
-    console.log(enteredAmount);
     // setUserInput({ ...userInputs, enteredAmount: event.target.value });
   };
 
   const dateChangeHandler = function (event) {
     setEnteredDate(event.target.value);
-    console.log(enteredDate);
     // setUserInput({ ...userInputs, enteredDate: event.target.value });
   };
 
+  const submitHandler = function (event) {
+    event.preventDefault();
+
+    const newExpense = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      data: new Date(enteredDate),
+    };
+
+    setEnteredAmount("");
+    setEnteredTitle("");
+    setEnteredDate("");
+
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label htmlFor="">Title: </label>
-          <input type="text" onChange={titleChangeHandler} />
+          <input
+            type="text"
+            value={enteredTitle}
+            onChange={titleChangeHandler}
+          />
         </div>
         <div className="new-expense__control">
           <label htmlFor="">amount: </label>
@@ -51,6 +67,7 @@ function ExpenseForm() {
             min="0.01"
             step="0.01"
             pattern="[0-9]+"
+            value={enteredAmount}
             onChange={amountChangeHandler}
           />
         </div>
@@ -60,6 +77,7 @@ function ExpenseForm() {
             type="date"
             min="2019-01-01"
             max={today}
+            value={enteredDate}
             onChange={dateChangeHandler}
           />
         </div>
