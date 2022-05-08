@@ -1,7 +1,7 @@
 import "./ExpenseForm.css";
 import React, { useState } from "react";
 
-function ExpenseForm() {
+function ExpenseForm(props) {
   const today = new Date().toISOString().split("T")[0];
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -40,13 +40,14 @@ function ExpenseForm() {
     const newExpense = {
       title: enteredTitle,
       amount: enteredAmount,
-      data: new Date(enteredDate),
+      date: new Date(enteredDate),
     };
+
+    if(newExpense.title && newExpense.amount && newExpense.date)props.onSaveNewExpense(newExpense);
 
     setEnteredAmount("");
     setEnteredTitle("");
     setEnteredDate("");
-
   };
 
   return (
