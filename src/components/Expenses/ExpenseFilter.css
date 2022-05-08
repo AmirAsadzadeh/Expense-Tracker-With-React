@@ -1,0 +1,15 @@
+.expense__filter {
+  display: flex;
+  justify-content: flex-end;
+  width: 95%;
+  margin: auto;
+}
+
+.expense__filter select {
+  padding: 0.5rem;
+  width: 10rem;
+  outline: none;
+  border: 1px solid purple;
+  border-radius: 1rem;
+  background-color: white;
+}

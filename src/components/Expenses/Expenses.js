@@ -2,6 +2,7 @@ import "./Expenses.css";
 import React from "react";
 import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
+import ExpenseFilter from "./ExpenseFilter";
 
 function Expenses() {
   const expenses = [
@@ -29,6 +30,7 @@ function Expenses() {
 
   return (
     <Card className="expenses">
+      <ExpenseFilter></ExpenseFilter>
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
