@@ -1,15 +1,20 @@
-.expense__filter {
+.expense_action--filter {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   width: 95%;
   margin: auto;
 }
 
-.expense__filter select {
+.expense_action--filter select {
   padding: 0.5rem;
   width: 10rem;
   outline: none;
   border: 1px solid purple;
   border-radius: 1rem;
   background-color: white;
+}
+
+.expense_action--filter label{
+  padding: 0.5rem;
 }

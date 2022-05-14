@@ -5,7 +5,7 @@ import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   const newExpenseHandler = function (expense){
-    console.log('from app.js')
+    return expense
   }
 
   return (

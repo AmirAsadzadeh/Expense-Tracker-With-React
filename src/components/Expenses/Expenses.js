@@ -28,9 +28,13 @@ function Expenses() {
     },
   ];
 
+  const changeFilter = function(value){
+    console.log(value)
+  }
+
   return (
     <Card className="expenses">
-      <ExpenseFilter></ExpenseFilter>
+      <ExpenseFilter onChangedFilter = {changeFilter}></ExpenseFilter>
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
