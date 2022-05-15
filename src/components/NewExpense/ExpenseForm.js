@@ -43,7 +43,8 @@ function ExpenseForm(props) {
       date: new Date(enteredDate),
     };
 
-    if(newExpense.title && newExpense.amount && newExpense.date)props.onSaveNewExpense(newExpense);
+    if (newExpense.title && newExpense.amount && newExpense.date)
+      props.onSaveNewExpense(newExpense);
 
     setEnteredAmount("");
     setEnteredTitle("");
