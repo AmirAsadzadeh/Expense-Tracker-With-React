@@ -1,0 +1,8 @@
+.expense-filter__fail {
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+li {
+  list-style-type: none;
+}
