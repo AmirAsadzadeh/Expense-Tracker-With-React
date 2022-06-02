@@ -35,7 +35,7 @@ function App() {
 
   const newExpenseHandler = function (expense) {
     setItems((prevItems) => {
-      return [expense, ...prevItems];
+      return [...prevItems, expense];
     });
   };
 
