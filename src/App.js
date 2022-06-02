@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import Card from "./components/UI/Card";
+import Chart from "./components/Chart/Chart";
+import Delete from "./components/UI/Delete";
 
 function App() {
   let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
@@ -21,9 +23,16 @@ function App() {
     });
   };
 
+  const clearLocalStorage = function (event) {
+    event.preventDefault();
+    setItems([]);
+    localStorage.clear();
+  };
+
   if (expenses.length >= 1) {
     return (
       <div>
+        <Delete onClick={clearLocalStorage} />
         <NewExpense onNewExpense={newExpenseHandler}></NewExpense>
         <Expenses items={items}></Expenses>
       </div>
@@ -31,12 +40,16 @@ function App() {
   } else {
     return (
       <div>
-        <NewExpense onNewExpense={newExpenseHandler}></NewExpense>;
+        <Delete onClick={clearLocalStorage} />
+        <NewExpense onNewExpense={newExpenseHandler}></NewExpense>
+        <Chart
+          expenses={expenses}
+          filteredExpenses={expenses}
+          filteredYear={"all"}
+        />
         <Card className="empty">
-          <p>
-            There is no expenses yet :)))<br></br>You can add it on the above
-            form
-          </p>
+          <p>There is no expenses yet :)</p>
+          <p>You can add it on the above form</p>
         </Card>
       </div>
     );

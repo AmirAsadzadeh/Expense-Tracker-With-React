@@ -1,0 +1,10 @@
+.delete-btn {
+  height: 3rem;
+  width: 3rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  border-radius: 50%;
+  background-color: lightblue;
+  border: none;
+}

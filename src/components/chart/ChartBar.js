@@ -14,7 +14,7 @@ function ChartBar(props) {
             height: `${percentage}%`,
           }}
         ></div>
-        <p className="percentage">{`${percentage}`}</p>
+        <p className="percentage">{percentage + "%"}</p>
       </div>
       <div className="chart-bar__label">
         <p>{props.label}</p>

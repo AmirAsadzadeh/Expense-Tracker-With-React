@@ -79,6 +79,7 @@ function ExpenseForm(props) {
             type="date"
             min="2019-01-01"
             max={today}
+            required
             value={enteredDate}
             onChange={dateChangeHandler}
           />
