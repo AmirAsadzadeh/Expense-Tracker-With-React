@@ -1,0 +1,33 @@
+.chart-bar__container {
+  height: 100%;
+  width: 4rem;
+  text-align: center;
+}
+
+.chart-bar {
+  height: 90%;
+  width: 25%;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-bar__filler {
+  height: 50%;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: purple;
+  position: absolute;
+  bottom: 0;
+  transition: all ease 0.5s;
+}
+
+.percentage {
+  transform: rotate(90deg);
+  font-size: 0.75rem;
+}
