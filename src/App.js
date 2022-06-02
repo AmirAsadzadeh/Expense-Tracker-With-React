@@ -2,49 +2,45 @@ import "./App.css";
 import React, { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import Card from "./components/UI/Card";
 
 function App() {
-  const expenses = [
-    {
-      id: "el1",
-      title: "Car Insurance",
-      amount: 294.67,
-      date: new Date(),
-    },
-    {
-      id: "el2",
-      title: "House Rent",
-      amount: 150,
-      date: new Date(2021, 2, 14),
-    },
-    {
-      id: "el3",
-      title: "food",
-      amount: 1500,
-      date: new Date(2022, 1, 28),
-    },
-    {
-      id: "el4",
-      title: "hobby",
-      amount: 700.99,
-      date: new Date(2018, 11, 24),
-    },
-  ];
+  let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+
+  expenses.forEach((item) => {
+    item.date = new Date(item.date);
+  });
 
   const [items, setItems] = useState(expenses);
 
   const newExpenseHandler = function (expense) {
     setItems((prevItems) => {
+      const newExpense = [...prevItems, expense];
+      localStorage.setItem("expenses", JSON.stringify(newExpense));
       return [...prevItems, expense];
     });
   };
 
-  return (
-    <div>
-      <NewExpense onNewExpense={newExpenseHandler}></NewExpense>
-      <Expenses items={items}></Expenses>
-    </div>
-  );
+  if (expenses.length >= 1) {
+    return (
+      <div>
+        <NewExpense onNewExpense={newExpenseHandler}></NewExpense>
+        <Expenses items={items}></Expenses>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <NewExpense onNewExpense={newExpenseHandler}></NewExpense>;
+        <Card className="empty">
+          <p>
+            There is no expenses yet :)))<br></br>You can add it on the above
+            form
+          </p>
+        </Card>
+      </div>
+    );
+  }
 }
 
 export default App;

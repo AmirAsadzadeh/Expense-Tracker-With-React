@@ -3,3 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.empty {
+  background-color: gray;
+  height: 15rem;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
