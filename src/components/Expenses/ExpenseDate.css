@@ -1,7 +1,7 @@
 .expense-item-date__date {
-  background-color: darkgray;
+  background-color: rgb(236, 247, 252);
   width: 4rem;
-  border: 0.12rem solid blueviolet;
+  border: 0.12rem solid rgb(43, 131, 226);
   border-radius: 1rem;
   text-align: center;
   margin: 0.25rem;
@@ -12,8 +12,8 @@
 }
 
 .expense-item-date__day {
-  background-color: rgb(61, 61, 61);
-  color: white;
+  background-color: rgb(179, 208, 218);
+  color: rgba(0, 0, 0, 0.788);
   padding: 0.5rem;
   margin: 0.25rem;
   border-radius: 0.5rem;

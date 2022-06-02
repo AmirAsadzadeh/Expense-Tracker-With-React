@@ -39,7 +39,7 @@
   cursor: pointer;
   width: 80%;
   text-align: center;
-  background-color: purple;
+  background-color: rgb(34, 133, 142);
   outline: black;
   padding: 0.5rem;
   height: 2.5rem;
@@ -54,5 +54,6 @@
 }
 
 .new-expense__actions button:active {
-  background-color: rgb(167, 1, 167);
+  background-color: rgb(28, 236, 232);
+  color: rgba(0, 0, 0, 0.766);
 }

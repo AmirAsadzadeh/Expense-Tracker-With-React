@@ -3,7 +3,8 @@
   width: 90%;
   padding: 1rem 5rem;
   margin: 1rem auto;
-  background-color: gray;
+  background-color: lightgray;
   display: flex;
   justify-content: space-between;
+  border: 1px solid rgb(156, 156, 156);
 }

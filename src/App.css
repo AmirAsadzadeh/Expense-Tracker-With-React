@@ -4,8 +4,12 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: rgb(236, 236, 236);
+}
+
 .empty {
-  background-color: gray;
+  background-color: lightgray;
   height: 15rem;
   width: 90%;
   margin: auto;
@@ -13,8 +17,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgba(0, 0, 0, 0.766);
   font-size: 2rem;
   text-align: center;
+  border: 1px solid rgb(155, 155, 155)
 }
-

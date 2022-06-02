@@ -6,12 +6,12 @@
 
 .chart-bar {
   height: 90%;
-  width: 25%;
+  width: 30%;
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
   margin: auto;
-  background-color: antiquewhite;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@
   height: 50%;
   width: 100%;
   border-radius: 0.5rem;
-  background-color: purple;
+  background-color: rgb(32, 153, 169);
   position: absolute;
   bottom: 0;
   transition: all ease 0.5s;
